@@ -8,6 +8,11 @@ PANEL=${PANEL:-0}
 GAP=${GAP:-20}
 MASTER=${MASTER:-900}
 
+if [[ $# -ne 0 ]] ; then
+    GAP=$1
+fi
+
+
 # get current window id and its borderwidth
 PFW=$(pfw)
 BW=$(wattr b $PFW)
